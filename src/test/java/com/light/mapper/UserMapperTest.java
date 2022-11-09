@@ -23,7 +23,7 @@ class UserMapperTest {
             User user=new User();
             user.setName("童宇");
             user.setAge(i);
-            user.setEmail(UUID.randomUUID()+"@gmail.com");
+//            user.setEmail(UUID.randomUUID()+"@gmail.com");
             int result = userMapper.insert(user);
             System.out.println("result="+result);
             //雪花算法自动创建ID
