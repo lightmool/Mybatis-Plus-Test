@@ -23,12 +23,11 @@ class UserMapperTest {
             User user=new User();
             user.setName("童宇");
             user.setAge(i);
-            user.setEmail("lightmool261@gmail.com");
+            user.setEmail(UUID.randomUUID()+"@gmail.com");
             int result = userMapper.insert(user);
             System.out.println("result="+result);
             //雪花算法自动创建ID
             //1589897901819600897
-            System.out.println("id="+user.getId());
         }
     }
 
@@ -45,7 +44,7 @@ class UserMapperTest {
         //DELETE FROM user WHERE name = ? AND age = ?
         //根据map集合进行数据删除
         Map<String,Object>map=new HashMap<>();
-        map.put("name","童宇");
+        map.put("user_name","童宇");
         map.put("age",22);
         int deleteByMap = userMapper.deleteByMap(map);
         System.out.println("result="+deleteByMap);

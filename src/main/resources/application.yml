@@ -11,3 +11,9 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #统一数据库表前缀
+      table-prefix: t_
+      #统一ID生成策略,雪花算法
+      id-type: assign_id
